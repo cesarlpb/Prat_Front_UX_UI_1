@@ -1,0 +1,113 @@
+/* Estilo global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Contenedor principal */
+#task_tracker {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    padding: 20px;
+}
+
+/* Título */
+#task_tracker h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Contenedor de entrada */
+#input_task {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+/* Estilo para el input de la tarea */
+#task {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+#task:focus {
+    border-color: #007bff;
+}
+
+/* Estilo para el botón de agregar */
+#btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#btn:hover {
+    background-color: #0056b3;
+}
+
+/* Tabla de tareas */
+#tasks {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#tasks th, #tasks td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+#tasks th {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Estilo del checkbox */
+#tasks td input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Botón de eliminar */
+#tasks td button {
+    background-color: #ff4747;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#tasks td button:hover {
+    background-color: #cc0000;
+}
+
+/* Estilo de tarea completada */
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}
