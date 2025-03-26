@@ -1,34 +1,34 @@
-import { useState, useEffect } from 'react'
-import './App.css'
-
-let url = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
+import './water.css';
+import './App.css';
+import Container from './Container';
+import { useState, useEffect } from 'react';
 
 function App() {
-  // State to store pokemons
-  const [pokemons, setPokemons] = useState([]);
 
-  // useEffect to fetch pokemons when the component mounts
+  // Creamos un estado inicial para los pokemons:
+  const [pokemons, setPokemons] = useState([]); 
+  const [bulbasaur, setBulbasaur] = useState({
+    id: 1,
+    name: "Bulbasaur",
+    url: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+  });
+
+  // Pedimos los datos del pokeAPI:
+  const url = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon";
   useEffect(() => {
     fetch(url)
-      .then(response => response.json())
-      .then(data => setPokemons(data.results));  // Update state with fetched pokemons
-  }, []);  // Empty dependency array means this runs only once when the component mounts
+    .then(response => response.json())
+    .then(data => setPokemons(data.results))
+  }, [])
 
-  // Render the pokemons or a loading message
   return (
-    <div>
-      <h1>Pokemons</h1>
-      {pokemons.length === 0 ? (
-        <p>Loading...</p>
-      ) : (
-        <ul>
-          {pokemons.map((pokemon, index) => (
-            <li key={index}>{pokemon.name}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+    <>
+      <div>
+        <h1>Mi Pokédex</h1>
+        <Container pokemons={pokemons} />
+      </div>
+    </>
+  )
 }
 
-export default App;
+export default App
