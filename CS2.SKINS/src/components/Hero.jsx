@@ -10,6 +10,7 @@ function Hero() {
                 <button>COMPRAR YA</button>
             </div>
             <img src="/src/assets/hero_image.png" alt="ak-47" className="hero-image" />
+            
         </section>
     );
 }
