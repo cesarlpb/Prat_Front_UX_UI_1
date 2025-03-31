@@ -1,0 +1,31 @@
+.steps-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos en fila */
+    align-items: center; /* Opcional: Alinea verticalmente */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    padding: 50px; /* Opcional: Para dar espacio en los lados */
+  }
+  
+  .steps {
+    height: 300px;
+    width: 300px;
+    padding-top: 60px;
+    border-radius: 20px;
+    background-color: #2f2531;
+    display: table-column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+  }
+
+  
+  
+  .btn{
+    background-color: #806CF5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }

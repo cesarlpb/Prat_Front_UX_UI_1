@@ -1,0 +1,60 @@
+/* Hero.css */
+.hero-container {
+    display: flex;
+    justify-content: space-between; /* Coloca el texto y la imagen en extremos opuestos */
+    align-items: center;  /* Alinea verticalmente los elementos */
+    padding: 50px;
+    background-color: #2f2531;
+  }
+  
+  .text-container {
+    max-width: 60%; /* Limitar el ancho del contenedor de texto */
+  }
+  
+  .text-container h2 {
+    font-size: 3.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .text-container p {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+  }
+  
+  .text-container button {
+    background-color: #806CF5;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .text-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hero-image {
+    max-width: 50%;  /* Controla el tamaño de la imagen */
+    transform: translateX(-55px);
+    height: auto;    /* Mantiene la relación de aspecto de la imagen */
+  }
+  
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column; /* Cambia a columna en pantallas pequeñas */
+      text-align: center;  /* Centra el texto cuando sea columna */
+    }
+  
+    .hero-image {
+      max-width: 100%;  /* La imagen ocupará todo el ancho en pantallas pequeñas */
+      margin-top: 20px;
+    }
+  
+    .text-container {
+      max-width: 100%;
+    }
+  }
+  

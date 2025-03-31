@@ -1,0 +1,15 @@
+/* Reseteo de estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 100vw;
+    overflow-x: hidden; /* Evita que haya scroll horizontal innecesario */
+  }
+  
+body{
+    background-color: #2b212a;
+}
