@@ -1,4 +1,3 @@
-import './water.css';
 import './App.css';
 import Container from './Container';
 import { useState, useEffect } from 'react';
@@ -21,12 +20,15 @@ function App() {
     .then(data => setPokemons(data.results))
   }, [])
 
-  return (
-    <>
-      <div>
+        {/* <div>
         <h1>Mi Pokédex</h1>
         <Container pokemons={pokemons} />
-      </div>
+      </div> */}
+      
+
+  return (
+    <>
+
     </>
   )
 }
