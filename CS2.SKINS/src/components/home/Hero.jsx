@@ -9,7 +9,7 @@ function Hero() {
                 <p>CS2.SKINS te ayuda a buscar tus skins favoritas</p>
                 <Link to="/market"><button>COMPRAR YA</button></Link>
             </div>
-            <img src="/src/assets/hero_image.png" alt="ak-47" className="hero-image" />
+            <img src="/CS2.SKINS/src/components/assets/hero_image.png" alt="ak-47" className="hero-image" />
             
         </section>
     );
