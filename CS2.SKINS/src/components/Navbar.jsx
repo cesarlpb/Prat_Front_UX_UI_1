@@ -1,20 +1,21 @@
+import { Link } from "react-router-dom"; //Para navegar entre paginas
 import './Navbar.css';
+
 function Navbar() {
     return (
         <header>
-        <nav className="navbar">
-          <div className="logo">
-            <a href="#">MiLogo</a>
-          </div>
-          <ul className="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Market</a></li>
-            <li><a href="#about">Intercambiar</a></li>
-          </ul>
-        </nav>
-      </header>
+            <nav className="navbar">
+                <div className="logo">
+                    <Link to="/">MiLogo</Link>
+                </div>
+                <ul className="nav-links">
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/market">Market</Link></li>
+                    <li><Link to="/trade">Intercambiar</Link></li>
+                </ul>
+            </nav>
+        </header>
     );
-  }
-  
-  export default Navbar;
-  
+}
+
+export default Navbar;

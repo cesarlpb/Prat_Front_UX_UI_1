@@ -4,7 +4,7 @@
   align-items: center;
   padding: 50px;
   background-color: #2f2531;
-  background-image: url(../assets/fondos_hero/nuke.webp);
+  background-image: url(...);
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.9;
@@ -28,6 +28,8 @@
 
 .text-container button {
   background-color: #806CF5;
+  width: 40%;
+  height: 40%;
   color: white;
   padding: 10px 20px;
   border: none;

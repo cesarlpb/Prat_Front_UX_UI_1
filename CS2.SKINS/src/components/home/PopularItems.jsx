@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import './PopularItems.css'; //Css
+import '../home_css/PopularItems.css'; //Css
 
 function PopularItems() {
   const [items, setItems] = useState([]);

@@ -1,4 +1,4 @@
-import './HowToBuy.css';
+import '../home_css/HowToBuy.css';
 
 function HowToBuy() {
     return (

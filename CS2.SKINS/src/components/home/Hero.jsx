@@ -1,5 +1,5 @@
-// Hero.js
-import './Hero.css';
+import { Link } from "react-router-dom"; //Para navegar entre paginas
+import '../home_css/Hero.css';
 
 function Hero() {
     return (
@@ -7,7 +7,7 @@ function Hero() {
             <div className="text-container">
                 <h2>Compra Las Mejores <br />Skins Del Mercado</h2>
                 <p>CS2.SKINS te ayuda a buscar tus skins favoritas</p>
-                <button>COMPRAR YA</button>
+                <Link to="/market"><button>COMPRAR YA</button></Link>
             </div>
             <img src="/src/assets/hero_image.png" alt="ak-47" className="hero-image" />
             
