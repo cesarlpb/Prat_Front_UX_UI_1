@@ -1,31 +1,58 @@
 .steps-container {
-    display: flex;
-    justify-content: space-between; /* Distribuye los elementos en fila */
-    align-items: center; /* Opcional: Alinea verticalmente */
-    width: 100%; /* Asegura que ocupe todo el ancho */
-    padding: 50px; /* Opcional: Para dar espacio en los lados */
-  }
-  
-  .steps {
-    height: 300px;
-    width: 300px;
-    padding-top: 60px;
-    border-radius: 20px;
-    background-color: #2f2531;
-    display: table-column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
+  display: flex;
+  flex-direction: row; /* Por defecto en fila */
+  justify-content: space-between; /* Distribuye los divs uniformemente */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Evita que se expanda demasiado */
+  margin: 0 auto; /* Centra el contenido */
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+.steps {
+  flex: 1; /* Permite que cada .steps crezca de manera uniforme */
+  min-width: 250px; /* Evita que sean demasiado pequeños */
+  max-width: 300px; /* Opcional: Define un tamaño máximo */
+  height: 300px;
+  background-color: #2f2531;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* MEDIA QUERY para móviles */
+@media (max-width: 768px) {
+  .steps-container {
+    flex-direction: column; /* Apila los elementos en columna */
+    align-items: center; /* Centra los divs */
+    gap: 10px;
   }
 
-  
-  
-  .btn{
-    background-color: #806CF5;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+  .steps {
+    width: 80%; /* Que ocupen la mayor parte del ancho en móviles */
   }
+}
+
+
+.steps-container {
+  display: flex;
+  justify-content: space-between; /* Distribuye los elementos en fila */
+  align-items: center; /* Opcional: Alinea verticalmente */
+  width: 100%; /* Asegura que ocupe todo el ancho */
+  padding: 50px; /* Opcional: Para dar espacio en los lados */
+}
+
+
+
+.btn{
+  background-color: #806CF5;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
