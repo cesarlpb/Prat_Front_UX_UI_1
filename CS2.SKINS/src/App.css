@@ -5,10 +5,21 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   width: 100vw;
-  overflow-x: hidden;
-  /* Evita que haya scroll horizontal innecesario */
+  height: 100vh;  /* Asegura que el body ocupe toda la altura de la ventana */
+  overflow: hidden;  /* Elimina el scrollbar de toda la página */
   font-family: 'Poppins', sans-serif;
   background-color: #2b212a;
+  position: relative;
+  overflow: auto;
+}
+
+/* Ocultar scrollbar pero permitir desplazamiento */
+body::-webkit-scrollbar {
+  display: none;  
+}
+
+body {
+  scrollbar-width: none;  
 }

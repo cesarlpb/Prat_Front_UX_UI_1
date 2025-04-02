@@ -1,8 +1,16 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+
+//Componentes globales
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+//Estilos
+import './App.css';
+
+// Paginas
 import Home from "./pages/Home";  
 import Market from "./pages/Market";  
-import './App.css';
 
 function App() {
   return (
@@ -12,6 +20,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/market" element={<Market />} />
       </Routes>
+      <Footer />
     </Router>
   );
 }
