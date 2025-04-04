@@ -8,7 +8,9 @@
   overflow-y: auto;
   border-radius: 5px;
   margin-bottom: 120px;
+  color: white;
 }
+
 
 .product-card {
   background: #282633;
