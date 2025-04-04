@@ -1,0 +1,66 @@
+{
+  "name": "juliettheweatherjs",
+  "version": "0.1.1",
+  "description": "A little mascot for showing you the weather :)",
+  "type": "module",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron-forge start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-forge package",
+    "make": "electron-forge make"
+  },
+  "author": "Alice Aliaga Moreno",
+  "license": "ISC",
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.1",
+    "node-fetch": "^3.3.2"
+  },
+  "config": {
+    "forge": {
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "juliettheweatherjs",
+            
+            "setupExe": "JulietTheWeatherJS-Setup.exe",
+            "noMsi": true
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ],
+          "config": {
+            
+          }
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "maintainer": "Alice Aliaga Moreno",
+            "description": "A little mascot for showing you the weather :)",
+            
+            "category": "Utility",
+            "productName": "JulietTheWeatherJS",
+            "arch": "x64"
+          }
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.8.0",
+    "@electron-forge/maker-deb": "^7.8.0",
+    "@electron-forge/maker-rpm": "^7.8.0",
+    "@electron-forge/maker-squirrel": "^7.8.0",
+    "@electron-forge/maker-zip": "^7.8.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.8.0",
+    "@electron-forge/plugin-fuses": "^7.8.0",
+    "@electron/fuses": "^1.8.0",
+    "electron": "35.1.3",
+    "electron-winstaller": "^5.4.0"
+  }
+}
