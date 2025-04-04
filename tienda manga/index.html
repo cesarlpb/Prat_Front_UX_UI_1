@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Mangas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: image("imagenes/one piece 3.jpg");
+        }
+        header {
+            background-color: #b41212;
+            color: rgb(252, 255, 253);
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #e61c1c;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #ffffff;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+            overflow-y: auto;
+        }
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            color: #a12b2b;
+        }
+        .product p {
+            color: #777;
+        }
+        .product button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #c42020;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 5px 0;
+            width: 100%;
+            
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>Tienda de Mangas</h1>
+        <p>Encuentra tus mangas favoritos aquí</p>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="productos.html#">Productos</a>
+        <a href="#">Ofertas</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <!-- Sección de Productos -->
+    <section id="productos" class="products">
+       
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Tienda de Mangas | Todos los derechos reservados</p>
+        <p><a href="mailto:contacto@tiendamangas.com" style="color: rgb(196, 26, 26);">contacto@tiendamangas.com</a></p>
+    </footer>
+
+    <script>
+        // Función para cargar productos desde el archivo JSON
+        async function cargarProductos() {
+            try {
+                // Fetch el archivo JSON con los productos
+                const response = await fetch('productos.json');
+                const productos = await response.json();
+
+                // Seleccionamos la sección donde vamos a mostrar los productos
+                const contenedor = document.getElementById('productos');
+
+                // Iteramos sobre los productos y los mostramos en la página
+                productos.forEach(producto => {
+                    const divProducto = document.createElement('div');
+                    divProducto.classList.add('product');
+
+                    divProducto.innerHTML = `
+                    <div class="product">
+                        <img src="${producto.imagen}" alt="${producto.nombre}">
+                        <h3>${producto.nombre}</h3>
+                        <p>${producto.descripcion}</p>
+                        <p><strong>€${producto.precio.toFixed(2)}</strong></p>
+                        <button>Agregar al carrito</button>
+                    </div>
+                    `;
+
+                    // Agregamos el producto al contenedor
+                    contenedor.appendChild(divProducto);
+                });
+            } catch (error) {
+                console.error('Error cargando los productos:', error);
+            }
+        }
+
+        // Llamamos a la función para cargar los productos al cargar la página
+        window.onload = cargarProductos;
+    </script>
+
+</body>
+</html>
