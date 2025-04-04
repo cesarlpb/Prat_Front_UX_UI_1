@@ -1,0 +1,192 @@
+header {
+  z-index: 1000;
+  background: #333;
+  color: white;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  padding: 0;
+  align-items: center;
+  margin: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: #a1a0a0;
+  text-decoration: none;
+  font-size: 1.5vw;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+#language_toggle {
+  background: #a1a0a0;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+}
+
+#language_toggle:hover {
+  background: #ffffff;
+}
+
+.menu_toggle {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #333;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  nav ul.show {
+    display: flex;
+    height: auto;
+  }
+
+  .menu_toggle {
+    display: block;
+  }
+}
+
+section {
+  padding: 6rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#sobre-mi {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+#home {
+  background-image: url("./assets/home_wallpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  display: block;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100vh;
+  text-align: left;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 1;
+}
+#home * {
+  position: relative;
+  z-index: 1;
+}
+
+.home {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2vw;
+}
+
+.name,
+.surname {
+  font-size: 15vw;
+  font-weight: bold;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+}
+.position {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 3vw;
+}
+
+.description {
+  color: white;
+  font-size: 1vw;
+}
+
+
+.home,
+.name,
+.surname,
+.position {
+  color: #fffdfd;
+}
+
+#about_me {
+  background: #ffffff;
+}
+
+#projects {
+  background: #ddd;
+}
+
+#contact {
+  background: #bbb;
+}
+
+footer {
+  background: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
