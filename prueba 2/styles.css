@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0c223f;
+    margin: 10;
+}
+
+.container {
+    background: #0c223f;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    border: 5px solid #ffffff;
+}
+input, select, button {
+    width: 100%;
+    padding: 100px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 20px;
+}
+select{
+    width: 25%;
+}
+button { 
+    background-color:white;
+    color: white;
+    cursor: pointer;
+    font-weight: bolder;
+    border: none;
+
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+li {
+    display: flex;
+    align-items: center;
+    background: black;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px 0;
+    
+}
+
+li input[type="checkbox"] {
+    margin-right: 15px;
+}
+
