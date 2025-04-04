@@ -23,11 +23,11 @@ function Market() {
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
-  // Función para manejar la búsqueda y el filtro por categoría
+  // Manejar la búsqueda y el filtro por categoría
   const handleSearch = (query, selectedType) => {
     const filtered = products.filter((product) => {
-      const matchesQuery = product.name.toLowerCase().includes(query.toLowerCase());
-      const matchesType = !selectedType || product.category.name === selectedType;
+      const matchesQuery = product.name.toLowerCase().includes(query.toLowerCase()); //Minusculas
+      const matchesType = !selectedType || product.category.name === selectedType; //Que se busque por categoria y nombre
       return matchesQuery && matchesType;
     });
 
