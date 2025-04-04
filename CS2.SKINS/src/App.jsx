@@ -17,7 +17,9 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
+        {/* Ruta para home */}
         <Route path="/" element={<Home />} />
+        {/* Ruta para market */}
         <Route path="/market" element={<Market />} />
       </Routes>
       <Footer />

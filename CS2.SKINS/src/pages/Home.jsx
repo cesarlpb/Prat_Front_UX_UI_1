@@ -5,8 +5,11 @@ import HowToBuy from "../components/Home/HowToBuy";
 const Home = () => {
   return (
     <div>
+      {/* Banner */}
       <Hero />
+      {/* Carrusel art populares */}
       <PopularItems />
+      {/* Pasos como comprar */}
       <HowToBuy />
     </div>
   );
