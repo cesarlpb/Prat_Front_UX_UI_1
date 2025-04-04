@@ -10,7 +10,7 @@ html, body {
   height: 100vh;  /* Asegura que el body ocupe toda la altura de la ventana */
   overflow: hidden;  /* Elimina el scrollbar de toda la página */
   font-family: 'Poppins', sans-serif;
-  background-color: #2b212a;
+  background-color: #1c1a24;
   position: relative;
   overflow: auto;
 }

@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #2b212a;
+  background-color: #282633;
   padding: 12px 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
