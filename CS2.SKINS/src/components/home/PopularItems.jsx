@@ -34,6 +34,7 @@ function PopularItems() {
       .catch(error => console.error("Error fetching data:", error));
   }, []);
 
+  //Numeros aleatorios para mostrar articulos populares
   const getRandomItems = (array, numItems) => {
     const shuffled = [...array].sort(() => 0.5 - Math.random());
     return shuffled.slice(0, numItems);
