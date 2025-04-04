@@ -1,0 +1,86 @@
+.hero-container {
+  display: flex;
+  justify-content: space-between; /* Separa texto e imagen */
+  align-items: center;
+  padding: 50px;
+  background-color: #2f2531;
+  background-image: url(../assets/fondos_hero/nuke.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.9;
+}
+
+.text-container {
+  max-width: 60%;
+}
+
+.icon{
+  width: 8%;
+}
+
+.text-container h2 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.text-container p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.text-container button {
+  background-color: #806CF5;
+  width: 40%;
+  height: 40%;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.text-container button:hover {
+  background-color: #0056b3;
+}
+
+.hero-image {
+  max-width: 50vw;  /* Controla el tamaño de la imagen en pantallas grandes */
+  height: auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-container {
+      flex-direction: column; /* Cambia la disposición a columna */
+      text-align: center;
+  }
+
+  .hero-image {
+      max-width: 80%;  /* Ajusta el tamaño de la imagen */
+      margin: 20px auto; /* Centra la imagen en móviles */
+  }
+
+  .text-container {
+      max-width: 90%;
+  }
+
+  .text-container h2 {
+      font-size: 2.5rem; /* Reduce tamaño del título en móviles */
+  }
+
+  .text-container p {
+      font-size: 1rem; /* Reduce tamaño del párrafo en móviles */
+  }
+}

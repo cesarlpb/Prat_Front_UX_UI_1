@@ -1,0 +1,103 @@
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  padding: 20px;
+  justify-content: center;
+  max-height: 700px;
+  overflow-y: auto;
+  border-radius: 5px;
+  margin-bottom: 120px;
+  color: white;
+}
+
+
+.product-card {
+  background: #282633;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+.product-card .img-product {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 14px;
+  color: #fff;
+  margin: 8px 0;
+}
+
+.product-card p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Estilo del botón */
+.add-to-cart-button {
+  background: #4b4857;
+  border: none;
+  padding: 6px 0; /* Reducir la altura del botón */
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ocupa todo el ancho */
+  transition: background 0.2s;
+  margin-top: 10px;
+}
+
+/* Efecto al pasar el ratón */
+.add-to-cart-button:hover {
+  background: #e68900;
+}
+
+/* Estilo del ícono dentro del botón */
+.cart-icon {
+  width: 20px; /* Reducir el tamaño de la imagen */
+  height: auto;
+  margin-right: 8px; /* Separar el ícono del texto */
+}
+
+/* Si agregas texto al botón, este estilo lo ayudará */
+.add-to-cart-button span {
+  font-size: 16px;
+  margin-left: 8px; /* Espacio entre el ícono y el texto */
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  }
+
+  .product-card h3 {
+    font-size: 12px;
+  }
+
+  .product-card p {
+    font-size: 10px;
+  }
+}
