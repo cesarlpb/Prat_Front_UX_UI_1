@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist de Tareas Semanales</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Checklist de Tareas Semanales</h2>
+        <input type="text" id="nuevaTarea" placeholder="Añadir nueva tarea">
+        <select id="diaSemana">
+            <option value="lunes">Lunes</option>
+            <option value="martes">Martes</option>
+            <option value="miercoles">Miércoles</option>
+            <option value="jueves">Jueves</option>
+            <option value="viernes">Viernes</option>
+            <option value="sabado">Sábado</option>
+            <option value="domingo">Domingo</option>
+        </select>
+        <button onclick="agregarTarea()">Agregar</button>
+        <div id="tareas">
+            <h3>Lunes</h3>
+            <ul id="lunes"></ul>
+            <h3>Martes</h3>
+            <ul id="martes"></ul>
+            <h3>Miércoles</h3>
+            <ul id="miercoles"></ul>
+            <h3>Jueves</h3>
+            <ul id="jueves"></ul>
+            <h3>Viernes</h3>
+            <ul id="viernes"></ul>
+            <h3>Sábado</h3>
+            <ul id="sabado"></ul>
+            <h3>Domingo</h3>
+            <ul id="domingo"></ul>
+        </div>
+    </div>
+    <script src="script1.js"></script>
+</body>
+</html>
