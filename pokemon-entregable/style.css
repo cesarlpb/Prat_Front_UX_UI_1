@@ -1,0 +1,425 @@
+* {
+    font-family: 'Press Start 2P', cursive;
+    ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: default;
+    user-select: none;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 50%;
+    position: relative;
+}
+
+#opponent {
+    position: relative;
+    top: 0px;
+    right: 1400px;
+    height: 350px;
+    width: 100%;
+}
+
+#myzone,
+#myzone-elegir {
+    position: relative;
+    height: 350px;
+    left: 1100px;
+}
+
+#platform1 {
+    position: absolute;
+    bottom: 190px;
+    left: 0px;
+    width: 250px;
+    height: auto;
+}
+
+#platform2 {
+    position: absolute;
+    top: 200px;
+    left: 1050px;
+    width: 200px;
+    height: auto;
+}
+
+#mypokemon {
+    position: absolute;
+    bottom: 250px;
+    left: 30px;
+    right: 200px;
+    width: 150px;
+    height: auto;
+}
+
+#enemy {
+    position: absolute;
+    top: 45px;
+    left: 1005px;
+    width: 250px;
+    height: auto;
+}
+
+
+/*
+    --------------------------------------------- UI ZONE ----------------------------------------------------
+    */
+
+#ui {
+    margin: 0 auto;
+    height: 240px;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#ui>.close {
+    width: 100%;
+    /* Asegura que los elementos hijos ocupen todo el ancho del padre */
+}
+
+#fight {
+    background-color: #ddd;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    max-width: 1000px;
+    height: 500px;
+}
+
+#infoBox {
+    width: 60%;
+    border: 10px solid #102c54;
+    background-color: white;
+}
+
+#mainBox {
+    margin: 20px 20px;
+    font-size: 30px;
+}
+
+#mainText {
+    font-size: 50px;
+}
+
+#attacks {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+    top: 20px;
+    display: none;
+
+}
+
+.attackBox {
+    width: 40%;
+    margin-top: 8px;
+    padding-left: 50px;
+    text-align: center;
+}
+
+.attackBox:nth-child(2) {
+    margin-right: 80px;
+}
+
+.triangle {
+    position: absolute;
+    width: 20px;
+    height: auto;
+}
+
+#triangle1 {
+    left: 5px;
+    top: 35px;
+}
+
+#triangle2 {
+    left: 505px;
+    top: 35px;
+}
+
+#triangle3 {
+    left: 5px;
+    top: 115px;
+}
+
+#triangle4 {
+    left: 505px;
+    top: 115px;
+}
+
+/*
+    ------------------------------------------------ ACTIONS (RIGHT SIDE) ----------------------------
+    */
+
+#actions {
+    width: 40%;
+    height: 95%;
+    border: 10px solid #102c54;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.actionBox {
+    text-align: center;
+    width: 50%;
+    margin-top: 25px;
+    padding-left: 20px;
+}
+
+.actionText {
+    cursor: pointer;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+.selector {
+    cursor: pointer;
+    position: absolute;
+    box-sizing: border-box;
+    width: 350px;
+    height: 80px;
+    border: 2px solid red;
+    /* z-index: 1001; */
+}
+
+#selector1 {
+    top: 10px;
+    right: 550px;
+}
+
+#selector2 {
+    top: 10px;
+    left: 570px;
+}
+
+#selector3 {
+    top: 120px;
+    left: 80px;
+}
+
+#selector4 {
+    top: 120px;
+    left: 570px;
+}
+
+/*
+    --------------------------------------- GENERAL ------------------------------------------------------------
+    */
+
+.close {
+    z-index: 1000;
+}
+
+/*
+    FONDO POKEMON
+*/
+
+#fondo-pokemon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; Para ajustar la imagen al tamaño sin distorsión */
+}
+
+#contenedor-play {
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#contenedor-play img {
+    cursor: pointer;
+    width: 70px;
+    position: relative;
+    left: 19px;
+
+}
+
+/* CUADRO DE VIDA POKEMONS */
+#cuadro-vida-enemigo {
+    background-color: white;
+    width: 40%;
+    height: 110px;
+    position: absolute;
+    bottom: 240px;
+    left: 650px;
+    right: 0;
+    border: 4px black solid;
+    display: block;
+    padding: 12px;
+}
+
+.cuadro-vida-mypokemon {
+    background-color: white;
+    width: 40%;
+    height: 110px;
+    position: absolute;
+    bottom: 240px;
+    /* left: 650px; */
+    right: 340px;
+    border: 4px black solid;
+    display: block;
+    padding: 12px;
+}
+
+/* CUADROS DE VIDA DE POKEMONS  */
+
+.contenedor-cuadro-vida {
+    /* margin-top: 15px; */
+    position: relative;
+}
+
+.sin-vida {
+    height: 5px;
+    background-color: #ccc;
+    margin-top: 10px"
+
+}
+
+.con-vida {
+    height: 5px;
+    background-color: green;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cuadro-vida-texto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cuadro-vida-texto h1 {
+    font-size: 18px;
+}
+
+.texto-puntos-vida {
+    margin-top: 10px;
+    text-align: end;
+}
+
+/* CUADRO ELEGIR POKEMON */
+.elegir-pokemon {
+    display: none;
+    width: 95%;
+    height: auto;
+    /* border: 1px solid black; */
+}
+
+.elegir-pokemon .col-md-12 {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    background-color: #ddd;
+    margin-bottom: 5px;
+}
+
+.elegir-pokemon .col-md-12 .img-fluid {
+    cursor: pointer;
+    position: relative;
+    bottom: 70px;
+    left: 20px;
+    width: 25%;
+}
+
+/* CUADRO MOCHILA / CAPTURAR */
+.bag {
+    display: none;
+    width: 100%;
+    height: auto;
+    background-color:lightsalmon;
+}
+
+.bag .col-md-12{
+    border-radius: 5px;
+    width: 80%;
+    height: 100px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    justify-content: space-around;
+    cursor: pointer;
+}
+
+.bag h3{
+    color: white;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.bag .col-md-12 .img-fluid{
+    position: relative;
+    bottom: 15px;
+    cursor: pointer;
+}
+
+/* --------------------------------- */
+.golpe {
+    animation: golpe 0.5s ease;
+}
+
+
+.wiggle {
+    animation-name: wiggle;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-direction: alternate;
+    animation-iteration-count: 3s;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+/* ANIMACIONES */
+@keyframes wiggle {
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    25%,
+    75% {
+        transform: translate(10px, 0);
+    }
+
+    50% {
+        transform: translate(-10px, 0);
+    }
+}
+
+@keyframes slideInAnimation {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slideInAnimation {
+    animation: slideInAnimation 1s ease forwards;
+}
