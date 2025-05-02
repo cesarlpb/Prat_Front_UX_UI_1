@@ -1,0 +1,7 @@
+#convert{
+    width: 600px;
+    border: 4px;
+    border-style: inset;
+    border-color: black;
+    padding-bottom: 10px;
+}
