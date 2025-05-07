@@ -101,3 +101,13 @@ function App() {
 }
 
 export default App;
+
+// Cómo probarlo:
+// Abre la consola del navegador (F12)
+// Recarga la página
+// Observa los mensajes en orden
+// Después de 5 segundos, verás los mensajes de limpieza
+// Puntos clave a notar:
+// useInsertionEffect se ejecuta antes de que el navegador pinte la pantalla, pero después del renderizado inicial.
+// useLayoutEffect se ejecuta después de que el DOM se ha actualizado, pero antes de que el navegador pinte.
+// useEffect se ejecuta después de que el navegador ha pintado.
