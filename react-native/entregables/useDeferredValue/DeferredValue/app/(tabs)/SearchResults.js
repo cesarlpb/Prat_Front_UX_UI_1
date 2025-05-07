@@ -1,7 +1,11 @@
-import {use} from 'react';
+import React, {use, useEffect} from 'react';
 import { fetchData } from './data.js';
 
-export default function SearchResults({ query }) {
+function SearchResultsComponent({ query, onRender }) {
+  // Llamamos a onRender cada vez que el componente se renderiza
+  useEffect(() => {
+    onRender?.();
+  });
   if (query === '') {
     return null;
   }
@@ -19,3 +23,5 @@ export default function SearchResults({ query }) {
     </ul>
   );
 }
+
+export default React.memo(SearchResultsComponent);
