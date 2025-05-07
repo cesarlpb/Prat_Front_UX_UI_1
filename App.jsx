@@ -1,3 +1,6 @@
+// useForm es un hook de React que sirve para gestionar formularios con 
+// facilidad. Toma un objeto como argumento opcional. 
+
 import React from 'react'
 import { useForm } from 'react-hook-form'
 
@@ -81,3 +84,15 @@ function FormularioContrasena() {
 }
 
 export default FormularioContrasena
+
+// Preguntas para profundizar (elige 4):
+// - Rendimiento: ¿Cómo optimiza React Hook Form el rendimiento en comparación con otras bibliotecas de formularios?
+// - Validación avanzada: ¿Cómo se implementaría la validación asíncrona, como verificar si un email ya está registrado?
+// - Formularios complejos: ¿Cuál es la mejor manera de manejar campos dinámicos o arrays de campos?
+// - Integración con UI Libraries: ¿Cómo se integra con bibliotecas de componentes como Material-UI o Chakra UI?
+// - Testing: ¿Cuáles son las mejores prácticas para probar formularios con React Hook Form?
+// - Accesibilidad: ¿Cómo se manejan los errores de validación para usuarios de lectores de pantalla?
+// - Rendimiento en formularios grandes: ¿Cuál es el impacto en el rendimiento cuando se tienen muchos campos?
+// - Migración: ¿Cuál sería la estrategia para migrar desde Formik o Formularios Controlados de React?
+// - Patrones avanzados: ¿Cómo implementar formularios multi-paso con persistencia de datos entre pasos?
+// - Seguridad: ¿Qué medidas de seguridad se deben considerar al manejar contraseñas en formularios?
