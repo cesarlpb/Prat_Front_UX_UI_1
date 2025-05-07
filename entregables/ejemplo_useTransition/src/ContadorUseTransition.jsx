@@ -1,30 +1,105 @@
 import React, { useState, useTransition } from 'react';
 
+/**
+ * Componente que demuestra el uso del hook useTransition para manejar
+ * actualizaciones de estado que no son críticas para la experiencia del usuario.
+ * 
+ * useTransition es útil para marcar ciertas actualizaciones de estado como de baja prioridad,
+ * lo que permite que otras actualizaciones más importantes se realicen primero.
+ */
 const Contador = () => {
   const [contador, setContador] = useState(0);
+  // isPending: indica si hay una transición en curso
+  // startTransition: función para marcar actualizaciones como no urgentes
   const [isPending, startTransition] = useTransition();
+  
+  // Efecto para rastrear cambios en isPending
+  useEffect(() => {
+    console.log(`isPending cambió a: ${isPending}`);
+  }, [isPending]);
   const [loading, setLoading] = useState(false);
 
-
+  /**
+   * Maneja el incremento del contador con una transición
+   * Muestra un estado de carga mientras se completa la operación
+   */
   const sumarContador = () => {
+    console.log('1. Iniciando sumarContador - Configurando loading en true');
     setLoading(true);
+    // Envuelve la actualización en startTransition para marcarla como no urgente
+    console.log('2. Iniciando transición...');
     startTransition(() => {
+      // Simula una operación pesada o una llamada a API
+      console.log('3. Dentro de la transición - Iniciando timeout');
       setTimeout(() => {
-        setContador((prev) => prev + 10);
+        console.log('4. Dentro del timeout - Actualizando contador');
+        setContador((prev) => {
+          const nuevoValor = prev + 10;
+          console.log(`5. Contador actualizado: ${prev} -> ${nuevoValor}`);
+          return nuevoValor;
+        });
+        console.log('6. Configurando loading a false');
         setLoading(false);
-      }, 2000); // Esperar 2 segundos de hacer la sumar
-    //   
+      }, 2000); // Simula un retraso de 2 segundos
     });
   };
 
   return (
     <div>
-      {/* Mientras se espera 2s, el estado loading es true, y se muestra el texto "Cargando...",
-      cunado es flase, se muestra el valor del contador */}
+      {/* 
+        Mientras se espera, se muestra "Cargando..."
+        Cuando termina, se muestra el valor actual del contador
+        
+        NOTA: Aquí podríamos usar isPending en lugar de loading para controlar
+        el estado de carga, ya que useTransition ya proporciona esta información
+      */}
       <h2>{loading ? "Cargando..." : `Contador: ${contador}`}</h2> 
-      <button onClick={sumarContador}>Sumar 10</button>
+      <button onClick={sumarContador}>
+        Sumar 10
+      </button>
+      
+      {/* Estado interno de la transición */}
+      <p>isPending: {isPending.toString()}</p>
     </div>
   );
 };
 
 export default Contador;
+
+// He añadido varios console.log estratégicos para rastrear el flujo de la transición. 
+// Ahora, cuando hagas clic en el botón "Sumar 10", verás en la consola:
+
+// 1. Flujo de ejecución:
+// - Inicio de la función sumarContador
+// - Inicio de la transición
+// - Dentro de la transición (timeout)
+// - Actualización del contador
+// - Finalización del proceso
+// 2. Seguimiento de isPending:
+// - Se ha añadido un useEffect que muestra cuándo cambia el valor de isPending
+// 3. Valores intermedios:
+// - Muestra el valor anterior y nuevo del contador
+// - Indica cuándo se actualiza el estado de loading
+// 4. Para ver los logs:
+// - Abre las herramientas de desarrollo del navegador (F12)
+// - Ve a la pestaña "Console"
+// - Haz clic en el botón "Sumar 10" y observa los mensajes en orden
+
+/*
+PREGUNTAS PARA PROFUNDIZAR:
+
+1. ¿Cuál es la diferencia entre usar el estado `loading` local vs. el valor `isPending` 
+   que devuelve useTransition? ¿Cuándo sería más apropiado usar uno u otro?
+
+2. ¿Qué ventajas tiene usar useTransition en lugar de un simple estado de carga 
+   para manejar operaciones asíncronas en React?
+
+3. ¿Cómo manejarías los errores dentro de la transición? ¿Qué pasaría si ocurre 
+   un error dentro del setTimeout?
+
+4. ¿Qué impacto tiene el uso de useTransition en el rendimiento de la aplicación 
+   cuando se tienen múltiples actualizaciones de estado concurrentes?
+
+5. Bonus: ¿Cómo podrías modificar este ejemplo para usar useTransition con 
+   una llamada a una API real en lugar de un setTimeout?
+*/
