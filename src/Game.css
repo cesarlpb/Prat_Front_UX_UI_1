@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+body {
+  font-family: "Sour Gummy", sans-serif;
+}
+.body{
+background-color: rgb(39, 44, 141);
+}
+
+.h1{
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 3.2em;
+    line-height: 1.1;
+    font-family: "Sour Gummy", sans-serif;
+}
+.popup {
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .popup div {
+    background: rgb(39, 44, 141);
+    width: 300px; 
+    height: 300px; 
+    border-radius: 15px; 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: "Sour Gummy", sans-serif;
+    
+  }
+  .popup h2 {
+    color: white; 
+    text-align: center; 
+    margin-bottom: 15px; 
+    font-size: 28px;
+    font-family: "Sour Gummy", sans-serif;    
+  }
+.popup input {
+  width: 87%;
+  padding: 10px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 28px;
+  font-family: "Sour Gummy", sans-serif;
+  
+}
+  .popup button {
+    width: 95%;
+    background: #357937;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    font-family: "Sour Gummy", sans-serif;
+  }
+  
+  .popup button:hover {
+    background: #61c564;
+  }
+  .botonClear {
+    width: 10%;
+    background: #357937;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 28px;
+    font-family: "Sour Gummy", sans-serif;
+    margin-bottom : 15px;
+  }
+  
+  .botonClear:hover {
+    background: #61c564;
+  }
+.titulo {
+  width: 300px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+
+}
+.titulo2 {
+  width: 300px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  position: relative; 
+  top: 20px; 
+  text-align: center; 
+}
+.game-container{
+  color: white; 
+  text-align: center; 
+  margin-bottom: 15px; 
+  font-size: 20px;
+  font-family: "Sour Gummy", sans-serif;
+}
+.carta-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+  gap: 10px; 
+  justify-items: center; 
+  align-items: center; 
+  justify-content: center; 
+  align-content: center;
+  width: 75%; 
+  max-width: 1250px; 
+  margin: 0 auto;   
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 75px !important;
+  overflow: hidden;
+}a {
+  font-weight: 500;
+  color: #00e417;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #ffe600;
+}
+
+html,body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  display: flex;
+  background-color: rgb(51, 57, 87);
+  flex-direction: column;
+  align-items: center;}
+
+  .carta {
+    width: 200px;
+    height: 300px;
+    background-color: rgb(51, 57, 87);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    perspective: 1000px; 
+  }
+  /* Aqui empieza el CSS para girar la carta */
+  .carta img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px; 
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+  .carta1 {
+    width: 200px;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d; 
+    transition: transform 0.5s linear; 
+  }
+  .carta.flipped .carta1 {
+    transform: rotateY(180deg); 
+  }
+  .cara {
+    width: 200px;
+    height: 300px;
+    position: absolute;
+    backface-visibility: hidden; 
+    border-radius: 10px;
+  }
+  .cara.detras {
+    transform: rotateY(180deg); 
+  }
+  /* Aqui acaba el CSS para girar la carta */
+
+  .popup h1 {
+    font-size: 35px;
+    font-family: "Sour Gummy", sans-serif;
+    color: white;
+    text-align: center;
+    position: absolute; 
+    top: 20%; 
+    left: 50%; 
+    width: 45%;
+    transform: translate(-50%, -50%); 
+    margin: 0;
+  }
+select{
+  padding: 10px;
+  margin-bottom: 15px; 
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 28px;
+  font-family: "Sour Gummy", sans-serif;
+  background-color: rgb(255, 255, 255);
+}
+.highlight1 {
+  color: #ff0000 !important; 
+  font-weight: bold;
+}
+.highlight2 {
+  color: #ffcc00;
+
+}
+.highlight3 {
+  color: #ff0000; 
+}
+.highlight4{
+  color: #00e417 !important; 
+}
+.footer {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 1px 0;
+  position: fixed; 
+  bottom: 0;
+  left: 0;
+  width: 100%; 
+  font-family: "Sour Gummy", sans-serif;
+  font-size: 20px;
+  text-align: center; 
+}
