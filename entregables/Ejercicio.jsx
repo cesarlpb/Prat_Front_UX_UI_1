@@ -108,10 +108,19 @@ function Ejercicio() {
 
 /**
  * Preguntas (elige 4 para profundizar):
- * 
- * 1. ¿Cuáles son los beneficios y desventajas de usar carga optimista en este componente específico?
- * 2. ¿Qué impacto tiene en la experiencia de usuario?
- * 3. ¿Hay casos en los que podría ser perjudicial?
+ ---------------------------------
+  * 2. ¿Qué impacto tiene en la experiencia de usuario?
+  --- Un impacto claro que se me ocurre seria el feedback insantaneo de respuesta a la acción que estes haciendo, ejemplo si escribes un comentario
+      y sale un mensaje que dice "Enviado!" sabes al momento que se esta enviando o se ha enviado sin tener que esperar a ver el mensaje escrito.
+  * 3. ¿Hay casos en los que podría ser perjudicial?
+  --- Cuando hay un fallo, crees que se ha ejecutado la acción y luego ha habido algun fallo y no se termina efectuando, el usuario puede creer que
+      ha hecho dicha acción.
+  * 14. ¿Qué tipos de errores podrían ocurrir?
+   --- Un fallo en el envio, desincronización de estado conflictos de ID (ID duplicado)...
+  * 15. ¿Cómo se podría hacer más robusto el manejo de errores?
+   --- Mostrar mensajes, hacer comprobaciones con try catch, Rollback del estado en caso de error..
+      --------------------------------
+ * 1. ¿Cuáles son los beneficios y desventajas de usar carga optimista en este componente específico?    
  * 4. ¿Cómo afecta al manejo de errores?
  * 5. ¿Cómo se implementaría este mismo componente sin usar carga optimista?
  * 6. ¿Qué cambios se necesitarían en el estado?
@@ -122,8 +131,8 @@ function Ejercicio() {
  * 11. ¿Cuándo sería más apropiado usar cada una?
  * 12. ¿Qué trade-offs implican cada enfoque?
  * 13. ¿Cómo se podría mejorar el manejo de errores en el enfoque optimista actual?
- * 14. ¿Qué tipos de errores podrían ocurrir?
- * 15. ¿Cómo se podría hacer más robusto el manejo de errores?
+  --- 
+
  * 16. ¿Qué información adicional sería útil mostrar al usuario en caso de error?
  */
 
