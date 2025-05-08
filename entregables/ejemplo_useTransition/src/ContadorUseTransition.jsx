@@ -91,15 +91,62 @@ PREGUNTAS PARA PROFUNDIZAR:
 1. ¿Cuál es la diferencia entre usar el estado `loading` local vs. el valor `isPending` 
    que devuelve useTransition? ¿Cuándo sería más apropiado usar uno u otro?
 
+    UseTransition devuelve isPending para saber si hay actualizaciones de baja prioridad 
+    en curso y startTransition para envolver esas actualizaciones.El estado loading local 
+    es simplemente un valor booleano controlado manualmente con useState, para manejar el
+    estado de carga en la UI.
+
+    El loading local se usa cuando el proceso es crítico y bloqueante para la interacción,
+    y quieres controlar explícitamente el estado de carga. En cambio, isPending se usa 
+    cuando necesitas priorizar las interacciones del usuario y mantener la UI responsiva,
+    mientras se procesan actualizaciones más pesadas en segundo plano.
+
+
 2. ¿Qué ventajas tiene usar useTransition en lugar de un simple estado de carga 
    para manejar operaciones asíncronas en React?
+    Permite diferenciar entre actualizaciones urgentes y no urgentes, 
+    y por tanto evita que la interfaz se congele o retrase en transiciones pesadas. 
+    Es decir, puede mantener el contenido actual visible mientras prepara la nueva UI
+    y puede seguir respondiendo a eventos interactivos mientras se procesa
+
 
 3. ¿Cómo manejarías los errores dentro de la transición? ¿Qué pasaría si ocurre 
    un error dentro del setTimeout?
 
+   Si ocurre un error dentro del setTimeout, el contador no se actualizaría, 
+   el estado de carga se mantendría como activo (loading sería true), 
+   y la interfaz de usuario podría quedar en un estado visible "Cargando...",
+   pero sin que realmente el contador haya cambiado.
+
+   Los errores se deberían manejarse con "try-catch" dentro del setTimeout del error y que 
+   el loading se establezca en false si ocurre un fallo.
+
+
 4. ¿Qué impacto tiene el uso de useTransition en el rendimiento de la aplicación 
    cuando se tienen múltiples actualizaciones de estado concurrentes?
 
+   El uso de useTransition mejora el rendimiento de la aplicación cuando hay múltiples
+   actualizaciones de estado simultáneas, ya que permite que React maneje las 
+   actualizaciones de alta y baja prioridad. Con useTransition, las actualizaciones que 
+   no son críticas para la interactividad inmediata se marcan como de baja prioridad 
+   mediante startTransition. Esto le permite a React priorizar las interacciones del 
+   usuario, asegurando que la interfaz de usuario permanezca ágil.
+
+
 5. Bonus: ¿Cómo podrías modificar este ejemplo para usar useTransition con 
    una llamada a una API real en lugar de un setTimeout?
+
+   Dentro del startTransition, se haría una función asíncrona para realizar
+   la llamada a la API usando el fetch, y se esperaría a la respuesta utilizando await. 
+   La respuesta de la API se procesaría con .json(). Una vez que la API haya respondido,
+   se actualizaría el contador con setContador.
+
+   El código del setTranstion sería:
+   startTransition(async () => {
+      const response = await fetch('enlace');
+      const data = await response.json();
+      setContador((prev) => prev + 10);
+      setLoading(false);
+    });
+
 */
