@@ -1,15 +1,32 @@
 // useInsertionEffect permite insertar elementos en el DOM antes de que se activen los efectos de diseño.
 
 // Preguntas sobre el uso de useInsertionEffect:
+
 // Rendimiento y Optimización:
-// ¿Por qué es más eficiente usar useInsertionEffect en lugar de useEffect o useLayoutEffect para la inyección de estilos? ¿Qué problemas podría causar usar los otros hooks en este caso?
+// ¿Por qué es más eficiente usar useInsertionEffect en lugar de useEffect o useLayoutEffect para la inyección de estilos? 
+// ¿Qué problemas podría causar usar los otros hooks en este caso?
+// - Es más eficiente porque pone los estilos antes de que la página se muestre, asi se evita los parpadeos de estilos.
+// - Si se usaran los otros hooks los estilos pueden llegar tarde y verse un cambio feo de estilos en la pantalla.
+
 // Gestión de Memoria:
-// El código actual usa un Set global (insertedRules) para rastrear estilos. ¿Qué pasaría si el componente se desmonta y vuelve a montar? ¿Cómo podríamos mejorar esto para evitar fugas de memoria?
+// El código actual usa un Set global (insertedRules) para rastrear estilos. 
+// ¿Qué pasaría si el componente se desmonta y vuelve a montar? ¿Cómo podríamos mejorar esto para evitar fugas de memoria?
+// - Pasaría que que el set se quedaría con los estilos anteriores y no se limpiarían.
+// - Para evitar eso podria usar un useRef para guardas los estilos y limpiarlos cuando el componente se va.
+
 // Efectos Secundarios:
-// ¿Qué sucede si el mismo className se usa con diferentes ruleText en diferentes componentes? El código actual solo verifica el className para evitar duplicados. ¿Es esto un problema? ¿Cómo podríamos manejarlo?
+// ¿Qué sucede si el mismo className se usa con diferentes ruleText en diferentes componentes? 
+// El código actual solo verifica el className para evitar duplicados. ¿Es esto un problema? ¿Cómo podríamos manejarlo?
+// - Sucede que uno va a remplazar al otro porque tienen el mismo nombre de clase y no se vería el estilo correcto.
+// - Para mejorarlo podría darle un nombre único a cada estilo para evitar conflictos.
+
 // Pruebas y Depuración:
-// ¿Cómo podrías probar este componente para asegurarte de que los estilos se están aplicando correctamente? ¿Qué herramientas de desarrollo del navegador serían útiles para depurar problemas con los estilos inyectados?
-//
+// ¿Cómo podrías probar este componente para asegurarte de que los estilos se están aplicando correctamente? 
+// ¿Qué herramientas de desarrollo del navegador serían útiles para depurar problemas con los estilos inyectados?
+// - Podría renderizar el componente y ver si los estilos se aplican correctamente.
+// - Se pdría abrir la pensaña "Elements" en las herramientas del navegador y ver si estás los estilos puestos correctamente. 
+
+
 import { useInsertionEffect, useEffect, useLayoutEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 
