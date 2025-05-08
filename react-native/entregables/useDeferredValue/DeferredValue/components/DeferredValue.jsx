@@ -5,10 +5,14 @@
 
 // Algunas preguntas a responder:
 // 1. ¿Cuál es el beneficio de usar useDeferredValue en este caso?
+// 1- Mejorar el rendimiento haciendo que este no se actualice en tiempo real.
 // 2. ¿Cómo se comportaría el componente si no se utilizara useDeferredValue?
+// 2- Haria que la query seria pasada directamente lo que haria que el componente se renderizaria en cada cambio que el usuario haga.
 // 3. ¿Cuál es la relación entre el estado isStale y el estado deferredQuery?
+// 3- Con deferredValue los datos se procesan mas tarde y el isStale se utiliza para poner animaciones como spiners mientras procesan los datos
 // Y, finalmente, puedes hacer una comparativa sobre el comportamiento con y sin useDeferredValue.
-//
+// DeferredValue(menos renders,experiencia de usuario suave, codigo ligeramente mas complejo)
+// Sin DeferredValue(más renders, saltos o bloqueos, no se aprecia si carga algo, codigo mas directo)
 import React, { Suspense, useState, useDeferredValue, useEffect } from 'react';
 import { Text, TextInput, View, ActivityIndicator, StyleSheet } from 'react-native';
 import SearchResults from './SearchResults'; // Asegúrate que sea nativo también
