@@ -102,16 +102,23 @@ export default App;
 
 /*
 PREGUNTAS PARA PROFUNDIZAR:
-
-1. ¿Por qué el cálculo sin useMemo se ejecuta en cada renderizado del componente,
-   incluso cuando solo cambia el contador? ¿Cómo afecta esto al rendimiento?
+1. ¿Por qué el cálculo sin useMemo se ejecuta en cada renderizado del componente, incluso cuando solo cambia el contador? ¿Cómo afecta esto al rendimiento?
+-React recalcula las funciones en cada renderizado para que la IU se actualice rápidamente. Lo malo es que si son muchas funciones o muy complejas, afecta al rendimiento
 
 2. ¿Qué sucedería si elimináramos el array de dependencias en el useMemo?
    ¿Y si añadiéramos una dependencia que cambia frecuentemente como 'count'?
+ -Si eliminaramos el array el cálculo se ejecutará en cada renderizado y tendríamos problema de rendimiento.
+ -Y si añadieramos un 'count' lo sobrecargariamos porque la memoria se actualizaría en cada renderizado
 
 3. ¿Cómo podríamos medir el impacto real en el rendimiento del uso de useMemo
    en una aplicación real? ¿Qué herramientas de desarrollo podríamos usar?
+ -Existen extensiones como Lighthouse y Sentry que ayudan a poder ver el rendimiento y corregirlo.
+  Habría que provar la funcion con y sin useMemo a ver si compensa 
+
 
 4. ¿En qué casos NO es recomendable usar useMemo? ¿Puede el uso excesivo
    de useMemo tener un impacto negativo en el rendimiento?
+ - Cuando es una función sencilla. Ya que un uso excesivo del useMemo puede provocar
+   fallos en el rendimiento
+
 */
