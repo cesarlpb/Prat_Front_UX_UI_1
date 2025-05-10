@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "nombre": "One piece 1 East blue saga",
+        "descripcion": "Es la era de los grandes piratas. Con sus banderas ondeando al viento, luchan entre ellos con el fin de llegar hasta el gran tesoro One Piece.",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece.webp"
+    },
+    {
+        "id": 2,
+        "nombre": "One piece 2 East blue saga",
+        "descripcion": "¡Unete a la tripulación!El Capitán Kuro se ha hecho pasar por el mayordomo de Kaya, la chica mas rica del pueblo. Su plan consiste en atacar la aldea, matar al joven y heredar su fortuna. Luffy, Zoro y Nami saben lo que su amigo Usuff siente por Kaya; por eso deciden ayudarle.",
+        "precio": 10.00,
+        "imagen": "imagenes/One piece 2.webp"
+    },
+    {
+        "id": 3,
+        "nombre": "One piece 3 East blue saga",
+        "descripcion": "La banda de Krieg toma como rehen a Zeff! Luffy no puede contener la ira ante una actitud tan ruin, sin embargo, Sanji no devuelve los ataques. Todo tiene una explicacion: un trágico pasado en comun con Zeff?.",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece 3.webp"
+    },
+    {
+        "id": 4,
+        "nombre": "One piece 4 East blue saga",
+        "descripcion": "¡Cuando Luffy y los demás escuchan la peticion de auxilio de Nami que le sale de lo más profundo del corazon, entran en batalla campal contra Arlong! ¡¡Sin embargo, Luffy cae al agua y corre un peligro inminente!! El resto de la banda luchan por salvar a su capitan.",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece 4.webp"
+    },
+    {
+        "id": 5,
+        "nombre": "One piece 5 East blue saga",
+        "descripcion": "Nada mas entrar a la Grand Line, Luffy y compañia son objetivo de la organizacion criminal secreta Baroque Works.   ¿¡Que les ocurrira ahora que saben el nombre de su jefe…!?.",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece 5.webp"
+    },
+    {
+        "id": 6,
+        "nombre": "One piece 6 East blue saga",
+        "descripcion": "Luffy y sus compañeros deciden que Tony Tony Chopper sea uno de los suyos. No obstante,   un triste acontecimiento que tuvo lugar en el pasado dejo una gran herida en el corazon del reno de nariz azul…",
+        "precio": 10.00,
+        "imagen": "imagenes/One piece 6.webp"
+    },
+    {
+        "id": 7,
+        "nombre": "One piece 7 East blue saga",
+        "descripcion": "Las tropas rebeldes y el ejército real están a punto de enfrentarse debido a los tejemanejes de Baroque Works.   Luffy y sus compañeros se dirigen a Rainbase, donde se encuentra Mr. 0, para detener cuanto antes la revuelta.   Sin embargo, caen en una trampa y terminan encerrados.",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece 7.jpg"
+    },
+    {
+        "id": 8,
+        "nombre": "One piece 8 East blue saga",
+        "descripcion": "Sigue la cuenta atras para el bombardeo de la plaza real de Alubarna. ¡¡Pero al fin Luffy logra llegar hasta donde está Crocodile!!  ¡¡La lucha definitiva para detener la revuelta en Arabasta esta a punto de producirse!!",
+        "precio": 10.00,
+        "imagen": "imagenes/one-piece-8.webp"
+    },
+    {
+        "id": 9,
+        "nombre": "One piece 9 East blue saga",
+        "descripcion": "¿¡De verdad existe la isla del cielo!? Llena de inquietud y expectación, la banda de Luffy visita a Cricket, el desterrado de la isla de Jaya. ¿¡Cuál será el secreto para poder navegar hasta el cielo!? ¡¡Aquí tenéis una historia de piratas que buscan el gran tesoro, el One Piece!!",
+        "precio": 10.00,
+        "imagen": "imagenes/one piece 9.webp"
+    }
+]

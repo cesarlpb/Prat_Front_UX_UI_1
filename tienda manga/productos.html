@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos - Tienda de Mangas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            text-align: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav a:hover {
+            background-color: #555;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product {
+            background-color: white;
+            border-radius: 8px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            color: #333;
+        }
+        .product p {
+            color: #777;
+        }
+        .product button {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .product button:hover {
+            background-color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <h1>Tienda de Mangas - Productos</h1>
+    </header>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="productos.html">Productos</a>
+        <a href="ofertas.html">Ofertas</a>
+        <a href="contacto.html">Contacto</a>
+    </nav>
+
+    <!-- Sección de Productos -->
+    <section class="products">
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Manga 1">
+            <h3>Manga Título 1</h3>
+            <p>Descripción breve del manga.</p>
+            <p><strong>€10.00</strong></p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Manga 2">
+            <h3>Manga Título 2</h3>
+            <p>Descripción breve del manga.</p>
+            <p><strong>€12.00</strong></p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Manga 3">
+            <h3>Manga Título 3</h3>
+            <p>Descripción breve del manga.</p>
+            <p><strong>€15.00</strong></p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <div class="product">
+            <img src="https://via.placeholder.com/150" alt="Manga 4">
+            <h3>Manga Título 4</h3>
+            <p>Descripción breve del manga.</p>
+            <p><strong>€8.00</strong></p>
+            <button>Agregar al carrito</button>
+        </div>
+
+        <!-- Agregar más productos aquí -->
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>© 2025 Tienda de Mangas | Todos los derechos reservados</p>
+        <p><a href="mailto:contacto@tiendamangas.com" style="color: white;">contacto@tiendamangas.com</a></p>
+    </footer>
+
+</body>
+</html>
