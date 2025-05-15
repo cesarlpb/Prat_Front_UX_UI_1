@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diapositivas de Front UX UI - 2025</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="shortcut icon" href="../assets/c.png" type="image/x-icon" />
+    <style>
+      .inline {
+        display: inline-block;
+        margin: 0.5rem auto;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Introducción a React</h2>
+          <p>
+            React es una librería de JavaScript para construir interfaces de
+            usuario de forma declarativa y basada en componentes.
+          </p>
+          <ul>
+            <li>
+              Creada por Facebook (Meta) en 2013 y mantenida por la comunidad.
+            </li>
+            <li>Permite descomponer la UI en componentes reutilizables.</li>
+            <li>
+              Utiliza un Virtual DOM para actualizar la vista de manera
+              eficiente.
+            </li>
+            <li>
+              Se programa con JSX, una sintaxis que mezcla JavaScript y HTML.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2>Introducción a React</h2>
+          <p>
+            React es una librería de JavaScript para construir interfaces de
+            usuario de forma declarativa y basada en componentes.
+          </p>
+          <ul>
+            <li>
+              Creada por Facebook (Meta) en 2013 y mantenida por una comunidad
+              activa.
+            </li>
+            <li>
+              Permite descomponer la UI en componentes reutilizables y
+              encapsulados.
+            </li>
+            <li>
+              Utiliza un Virtual DOM para actualizar la vista de forma
+              eficiente.
+            </li>
+            <li>
+              Se programa con JSX, una sintaxis que mezcla JavaScript y marcado
+              HTML.
+            </li>
+          </ul>
+
+          <h3>Ejemplos de componentes</h3>
+          <p><strong>Componente funcional:</strong></p>
+          <pre><code>function Hola({ nombre }) {
+  return &lt;h1&gt;Hola, {nombre}!&lt;/h1&gt;;
+}</code></pre>
+
+          <p><strong>Componente de clase:</strong></p>
+          <pre><code>class Contador extends React.Component {
+  state = { count: 0 };
+
+  render() {
+    return (
+      &lt;button onClick={() =&gt; this.setState({ count: this.state.count + 1 })}&gt;
+        Has hecho clic {this.state.count} veces
+      &lt;/button&gt;
+    );
+  }
+}</code></pre>
+
+          <h3>¿Qué ofrece React?</h3>
+          <ul>
+            <li>Componentes reutilizables y composables.</li>
+            <li>
+              Sistema de <em>props</em> para pasar datos entre componentes.
+            </li>
+            <li>
+              Manejo de <em>state</em> interno para componentes interactivos.
+            </li>
+            <li>
+              Ciclo de vida de componentes (montaje, actualización y
+              desmontaje).
+            </li>
+            <li>JSX: sintaxis declarativa que facilita la escritura de UIs.</li>
+            <li>
+              Virtual DOM: diffing eficiente para minimizar operaciones reales
+              en el DOM.
+            </li>
+            <li>Context API para gestión de estado global ligero.</li>
+            <li>
+              Ecosistema maduro: Hooks, enrutamiento (React Router), gestión de
+              estado (Redux, Zustand), testing, etc.
+            </li>
+          </ul>
+        </section>
+
+        <hr>
+
+        <section>
+          <h2>Hooks de React</h2>
+        </section>
+
+        <section>
+          <h2>1. ¿Qué son los Hooks?</h2>
+          <ul>
+            <li>
+              Son funciones que permiten “enganchar” el estado y el ciclo de
+              vida de React desde componentes funcionales.
+            </li>
+            <li>Introducidos en React 16.8 para evitar el uso de clases.</li>
+            <li>
+              Permiten extraer lógica de estado en funciones reutilizables
+              (Custom Hooks).
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>2. Reglas de los Hooks</h2>
+          <ol>
+            <li>
+              <strong>Sólo llamarlos en el nivel superior</strong><br />
+              No dentro de bucles, condiciones ni funciones anidadas.
+            </li>
+            <li>
+              <strong
+                >Sólo llamarlos desde componentes de React o Custom
+                Hooks</strong
+              ><br />
+              Nunca desde funciones JavaScript normales.
+            </li>
+            <li>
+              <strong>Empezar siempre con <code>use…</code></strong
+              ><br />
+              Ejemplo: <code>useState</code>, <code>useFetch</code>,
+              <code>useCustomLogic</code>.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>3. <code>useState</code></h2>
+          <ul>
+            <li>
+              <strong>Sintaxis</strong><br />
+              <pre><code>const [valor, setValor] = useState(valorInicial);</code></pre>
+            </li>
+            <li>
+              <strong>Retorna</strong>
+              <ol>
+                <li>El estado actual (<code>valor</code>)</li>
+                <li>Una función para actualizarlo (<code>setValor</code>)</li>
+              </ol>
+            </li>
+            <li>
+              <strong>Ejemplo</strong>
+              <pre><code>function Contador() {
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Has hecho clic {count} veces&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;
+        Incrementar
+      &lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4. <code>useEffect</code></h2>
+          <ul>
+            <li>
+              <strong>Sintaxis</strong><br />
+              <pre><code>useEffect(() =&gt; {
+  // efecto
+  return () =&gt; {
+    // limpieza (opcional)
+  };
+}, [dependencias]);</code></pre>
+            </li>
+            <li>
+              <strong>Cuándo se ejecuta</strong>
+              <ul>
+                <li>Al montar el componente.</li>
+                <li>Cuando cambian las dependencias.</li>
+                <li>Al desmontar (si devuelve función de limpieza).</li>
+              </ul>
+            </li>
+            <li>
+              <strong>Ejemplos de uso</strong>
+              <ul>
+                <li>Llamadas a APIs</li>
+                <li>Suscripciones</li>
+                <li>Manipulación directa del DOM</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5. <code>useContext</code></h2>
+          <ul>
+            <li>
+              Permite consumir un Context sin
+              <code>&lt;Context.Consumer&gt;</code>
+            </li>
+            <li>
+              <strong>Sintaxis</strong><br />
+              <pre><code>const valor = useContext(MiContext);</code></pre>
+            </li>
+            <li>
+              <strong>Ejemplo</strong>
+              <pre><code>const TemaContext = React.createContext('light');
+
+function Boton() {
+  const tema = useContext(TemaContext);
+  return &lt;button className={tema}&gt;Click me&lt;/button&gt;;
+}</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>6. <code>useRef</code></h2>
+          <ul>
+            <li>Mantiene un valor mutable que persiste entre renders</li>
+            <li>
+              <strong>Sintaxis</strong><br />
+              <pre><code>const refElemento = useRef(null);</code></pre>
+            </li>
+            <li>
+              <strong>Usos</strong>
+              <ul>
+                <li>Referenciar nodos del DOM</li>
+                <li>Guardar valores sin disparar re-render</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>7. <code>useReducer</code></h2>
+          <ul>
+            <li>
+              Alternativa a <code>useState</code> para lógicas de estado
+              complejas
+            </li>
+            <li>
+              <strong>Sintaxis</strong><br />
+              <pre><code>const [state, dispatch] = useReducer(reducer, estadoInicial);</code></pre>
+            </li>
+            <li>
+              <strong>Ejemplo</strong>
+              <pre><code>function reducer(state, action) {
+  switch (action.type) {
+    case 'incrementar':
+      return {count: state.count + 1};
+    default:
+      throw new Error();
+  }
+}
+
+function Contador() {
+  const [state, dispatch] = useReducer(reducer, {count: 0});
+  return (
+    &lt;button onClick={() =&gt; dispatch({type: 'incrementar'})}&gt;
+      {state.count}
+    &lt;/button&gt;
+  );
+}</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>8. Hooks de rendimiento</h2>
+          <ul>
+            <li>
+              <code>useCallback(fn, deps)</code><br />
+              Memoriza una función para evitar recrearla en cada render.
+            </li>
+            <li>
+              <code>useMemo(fn, deps)</code><br />
+              Memoriza el resultado de una función costosa.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>9. Custom Hooks</h2>
+          <ul>
+            <li>
+              Funciones que utilizan otros Hooks y comienzan con
+              <code>use</code>
+            </li>
+            <li>Permiten extraer lógica reutilizable</li>
+            <li>
+              <strong>Ejemplo: Hook para fetch de datos</strong>
+              <pre><code>function useFetch(url) {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() =&gt; {
+    fetch(url)
+      .then(res =&gt; res.json())
+      .then(json =&gt; {
+        setData(json);
+        setLoading(false);
+      });
+  }, [url]);
+
+  return { data, loading };
+}</code></pre>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>10. Buenas prácticas y recursos</h2>
+          <ul>
+            <li>Seguir siempre las <strong>Reglas de los Hooks</strong>.</li>
+            <li>
+              Mantener los Custom Hooks enfocados en una sola responsabilidad.
+            </li>
+            <li>
+              Utilizar <code>eslint-plugin-react-hooks</code> para validación
+              automática.
+            </li>
+            <li>
+              <strong>Recursos</strong>
+              <ul>
+                <li>
+                  <a
+                    href="https://reactjs.org/docs/hooks-intro.html"
+                    target="_blank"
+                    >Documentación oficial de React</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://reactjs.org/docs/hooks-rules.html"
+                    target="_blank"
+                    >Reglas de los Hooks</a
+                  >
+                </li>
+                <li>Blog de Kent C. Dodds sobre Custom Hooks</li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

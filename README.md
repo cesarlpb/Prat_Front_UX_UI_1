@@ -40,6 +40,25 @@ Para subir un cambio:
 
 ---
 
+## Ejercicios por temas
+
+- [Ejercicios de HTML](html/ejercicios.md)
+- [Ejercicios de CSS](css/ejercicios.md)
+- [Ejercicios de JavaScript](js/ejercicios.md)
+- [Ejercicios de React](react/ejercicios.md)
+- [Ejercicios de Node.js](server/node/ejercicios.md)
+- [Ejercicios de bases de datos](server/db/ejercicios.md)
+- [Ejercicios de APIs REST](server/api/ejercicios.md)
+
+---
+
+## Mini-Labs
+
+- [Lab Refactor en Context](react/apuntes/estado_global.md)
+- [Lab ](react/apuntes/estado_global.md)
+
+---
+
 ## Referencias
 
 - Para crear llave abrid CMD y ejecutad `ssh-keygen` > Enter hasta el final y la llave estará en una ruta que sale en uno de estos pasos, algo como `C:\Users\<tu_usuario>/.ssh/id_rsa.pub` en Windows y algo como `/home/<usuario>/.ssh` en Linux. En Mac (wip)

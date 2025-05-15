@@ -1,0 +1,71 @@
+/* ───────────────────────────────
+   Navbar adaptado al marcado:
+   <nav>…<a>…<a class="active">…</a>…</nav>
+   ─────────────────────────────── */
+
+/* 1 ▸ design-tokens (solo si no los tienes ya) */
+:root {
+  --radius-lg: 0.75rem;
+  --shadow-md: 0 1px 4px rgba(0, 0, 0, 0.08);
+
+  --bg-page:   #f3f4f6;
+  --bg-nav:    #ffffff;                /* fallback para browsers sin blur */
+  --bg-nav-blur: rgba(255, 255, 255, 0.75);
+  --border-nav: #e5e7eb;
+
+  --text-main: #111827;
+  --primary:   #3b82f6;
+  --primary-h: #2563eb;
+}
+
+/* 2 ▸ barra fija con efecto glass */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 2rem;
+
+  background: var(--bg-nav-blur);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px); /* Safari */
+  border-bottom: 1px solid var(--border-nav);
+  box-shadow: var(--shadow-md);
+}
+
+/* 3 ▸ enlaces */
+nav > a {
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-lg);
+  font-weight: 500;
+  color: var(--text-main);
+  transition: background 0.15s ease, color 0.15s ease;
+  white-space: nowrap;
+}
+
+/* hover / focus */
+nav > a:hover,
+nav > a:focus-visible {
+  background: var(--bg-page);
+}
+
+/* enlace activo (class="active") */
+nav > a.active {
+  background: var(--primary);
+  color: #fff;
+}
+
+/* 4 ▸ responsivo: apilar enlaces en móviles */
+@media (max-width: 640px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 0.5rem 1rem;
+  }
+  nav > a {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}

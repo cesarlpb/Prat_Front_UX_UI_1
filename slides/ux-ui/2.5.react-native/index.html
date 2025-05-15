@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diapositivas de Front UX UI - 2025</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="shortcut icon" href="../assets/c.png" type="image/x-icon" />
+    <style>
+      .inline {
+        display: inline-block;
+        margin: 0.5rem auto;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Introducción a React Native</h2>
+          <p>
+            React Native es un framework de JavaScript para construir
+            aplicaciones móviles nativas en iOS y Android usando React.
+          </p>
+          <ul>
+            <li>Creado por Facebook (Meta) en 2015.</li>
+            <li>Permite compartir gran parte del código entre plataformas.</li>
+            <li>Renderiza componentes nativos, no WebViews.</li>
+            <li>Desarrollo con JSX y JavaScript moderno.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>Ejemplos de componentes</h3>
+          <p><strong>Componente funcional:</strong></p>
+          <pre><code>import React from 'react';
+import { View, Text, Button } from 'react-native';
+
+function Saludo({ nombre }) {
+  return (
+    &lt;View&gt;
+      &lt;Text&gt;¡Hola, {nombre}!&lt;/Text&gt;
+      &lt;Button title="Presióname" onPress={() =&gt; alert('¡Hola!')} /&gt;
+    &lt;/View&gt;
+  );
+}
+
+export default Saludo;</code></pre>
+
+          <p><strong>Componente de clase:</strong></p>
+          <pre><code>import React, { Component } from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+
+class Contador extends Component {
+  state = { count: 0 };
+
+  render() {
+    return (
+      &lt;View&gt;
+        &lt;Text&gt;Clics: {this.state.count}&lt;/Text&gt;
+        &lt;TouchableOpacity onPress={() =&gt; this.setState({ count: this.state.count + 1 })}&gt;
+          &lt;Text&gt;Incrementar&lt;/Text&gt;
+        &lt;/TouchableOpacity&gt;
+      &lt;/View&gt;
+    );
+  }
+}
+
+export default Contador;</code></pre>
+        </section>
+
+        <section>
+          <h2>¿Qué ofrece React Native?</h2>
+          <ul>
+            <li>
+              Componentes nativos: <code>View</code>, <code>Text</code>,
+              <code>Image</code>, etc.
+            </li>
+            <li>Estilos con Flexbox y <code>StyleSheet.create</code>.</li>
+            <li>Hot Reload y Fast Refresh para iteración rápida.</li>
+            <li>Acceso a APIs nativas: Cámara, GPS, Sensores.</li>
+            <li>
+              Integración con librerías de la comunidad (React Navigation,
+              Redux, etc.).
+            </li>
+            <li>Expo CLI para arranque rápido y despliegue simplificado.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Componentes básicos</h2>
+          <ul>
+            <li><code>View</code> – contenedor genérico</li>
+            <li><code>Text</code> – mostrar texto</li>
+            <li><code>Image</code> – imágenes locales o remotas</li>
+            <li><code>ScrollView</code> – contenedor desplazable</li>
+            <li><code>FlatList</code> – listas optimizadas</li>
+            <li><code>TextInput</code> – entrada de texto</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Estilos en React Native</h2>
+          <ul>
+            <li>Definidos en JavaScript con objetos.</li>
+            <li>
+              <code>StyleSheet.create({ … })</code> para mejores validaciones.
+            </li>
+            <li>Flexbox por defecto para diseño responsivo.</li>
+            <li>
+              No existen clases CSS; todo es inline o en objetos StyleSheet.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Navegación</h2>
+          <ul>
+            <li>React Navigation – librería más popular.</li>
+            <li>Stack Navigator, Tab Navigator, Drawer Navigator.</li>
+            <li>
+              Configuración con componentización y hooks
+              (<code>useNavigation</code>).
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Acceso a APIs nativas</h2>
+          <ul>
+            <li><code>PermissionsAndroid</code> para permisos en Android.</li>
+            <li>Geolocation, Camera, Accelerometer, etc.</li>
+            <li>Uso de módulos nativos nativos o bridged modules.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Herramientas y entorno</h2>
+          <ul>
+            <li>Expo CLI: iniciar proyectos sin configuración nativa.</li>
+            <li>React Native CLI: control total sobre código nativo.</li>
+            <li>Debugging con React DevTools y Flipper.</li>
+            <li>Testing con Jest y React Native Testing Library.</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

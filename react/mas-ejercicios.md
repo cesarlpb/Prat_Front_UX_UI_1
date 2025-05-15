@@ -1,4 +1,60 @@
-# 📝 Más ejercicios por Hook
+# Ejercicios Generales de React
+
+## React
+
+1. **Create React App**: Inicializa un proyecto con `npx create-react-app` y renderiza “Hola Mundo”.
+
+2. **Componentes funcionales**: Crea dos componentes que reciban props y las muestren.
+
+3. **JSX**: Utiliza expresiones JS dentro de markup: variables, ternarios y arrays mapeados.
+
+4. **Props dinámicas**: Pasa diferentes props (texto, números, funciones) de padre a hijo.
+
+5. **useState básico**: Implementa un contador con botones “+” y “–” usando `useState`.
+
+6. **Eventos en React**: Maneja `onClick`, `onChange` y `onSubmit` en formularios controlados.
+
+7. **Listas y keys**: Renderiza un array de objetos como lista `<ul>` con `key` único.
+
+8. **Condicionales**: Muestra u oculta un componente con operador ternario.
+
+9. **Efectos con useEffect**: Al montar el componente, registra un mensaje en consola.
+
+10. **Fetch en useEffect**: Trae datos de una API y muéstralos en pantalla.
+
+11. **Formulario controlado**: Crea un `<input>` controlado por estado y valida su valor.
+
+12. **Lifting State Up**: Comparte estado de un input entre dos componentes hermanos a través del padre.
+
+13. **Context API**: Define un contexto de tema (claro/oscuro) y consúmelo en varios componentes.
+
+14. **Custom Hook**: Extrae lógica de `useState`/`useEffect` en un hook propio, p.ej. para fetch.
+
+15. **useRef**: Enfoca un input al montar el componente usando `ref`.
+
+16. **Fragments**: Usa `<>…</>` para agrupar elementos sin nodos extra en el DOM.
+
+17. **CSS Modules**: Aplica estilos locales con un archivo `*.module.css`.
+
+18. **Styled-components**: (Opcional) Define un botón estilizado con styled-components.
+
+19. **React Router**: Configura rutas básicas `/home` y `/about` con `react-router-dom`.
+
+20. **Lazy & Suspense**: Carga un componente con `React.lazy` y muéstralo dentro de `<Suspense>`.
+
+21. **useMemo**: Memoriza el resultado de una función costosa que renderiza una lista.
+
+22. **useCallback**: Pasa una callback memoizada a un componente hijo para evitar re-render innecesario.
+
+23. **Error Boundary**: Implementa un componente de clase que capture errores de renderizado.
+
+24. **useReducer**: Refactoriza el estado de un formulario complejo usando `useReducer`.
+
+25. **Deploy**: Publica tu aplicación React en Netlify o Vercel y comparte la URL.
+
+---
+
+# 📝 Ejercicios por Hooks de React
 
 ## 🔁 `useState`
 

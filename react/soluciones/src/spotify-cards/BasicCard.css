@@ -1,0 +1,46 @@
+/* Contenedor principal */
+.basic-card {
+  max-width: 20rem;            /* 320 px */
+  background: #ffffff;
+  border-radius: 0.75rem;      /* 12 px */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  font-family: system-ui, sans-serif;
+}
+
+/* Imagen de portada */
+.cover {
+  width: 100%;
+  height: 12rem;               /* 192 px */
+  object-fit: cover;
+}
+
+/* Zona de texto e icono */
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;               /* 16 px */
+}
+
+/* Título */
+.title {
+  font-size: 1.125rem;         /* 18 px */
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* Artista y duración */
+.meta {
+  font-size: 0.875rem;         /* 14 px */
+  color: #4b5563;
+  margin: 0;
+}
+
+/* Icono de reproducción */
+.play-icon {
+  font-size: 1.5rem;           /* 24 px */
+  line-height: 1;
+  user-select: none;
+}

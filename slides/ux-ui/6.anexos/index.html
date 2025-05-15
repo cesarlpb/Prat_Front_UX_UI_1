@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diapositivas de Front UX UI - 2025</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/water.css@2/out/dark.css"
+    />
+    <link rel="shortcut icon" href="../assets/c.png" type="image/x-icon" />
+    <style>
+      .inline {
+        display: inline-block;
+        margin: 0.5rem auto;
+        margin-left: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Guía de recursos y herramientas útiles</h2>
+          <p>
+            Recopilación de tecnologías y plataformas para enriquecer tu
+            formación.
+          </p>
+        </section>
+
+        <section>
+          <h3>1. Integración de APIs REST con Node.js</h3>
+          <p>Crear endpoints básicos usando Express:</p>
+          <pre>
+            <code>
+  import express from 'express';
+  const app = express();
+  app.use(express.json());
+
+  // GET básico
+  app.get('/usuarios', (req, res) => {
+    res.json([{ id: 1, name: 'Ana' }]);
+  });
+
+  // POST con JSON
+  app.post('/usuarios', (req, res) => {
+    const { name, email } = req.body;
+    res.status(201).json({ id: Date.now(), name, email });
+  });
+
+  app.listen(3000, () => console.log('API corriendo en http://localhost:3000'));
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>2. Clerk como proveedor de autenticación en React</h3>
+          <p>Configura Clerk en tu app React:</p>
+          <pre>
+            <code>
+  // npm install @clerk/clerk-react
+
+  // en main.jsx\import { ClerkProvider } from '@clerk/clerk-react';
+  const clerkKey = process.env.REACT_APP_CLERK_PUBLISHABLE_KEY;
+  ReactDOM.createRoot(...).render(
+    <ClerkProvider publishableKey={clerkKey}>
+    <App />
+  </ClerkProvider>
+);
+          </code>
+          </pre>
+        </section>
+
+        <section>
+          <h3>3. Supabase como backend de servicios</h3>
+          <p>Inicializa el cliente y realiza operaciones:</p>
+          <pre><code>npm install @supabase/supabase-js
+
+import { createClient } from '@supabase/supabase-js';
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+// Leer registros
+const { data, error } = await supabase.from('posts').select('*');
+
+// Insertar registro
+await supabase.from('posts').insert([{ title, content }]);
+</code></pre>
+        </section>
+
+        <section>
+          <h3>4. v0.dev para inspiración en diseños</h3>
+          <ul>
+            <li>Galería de sitios: landing pages, dashboards, portfolios</li>
+            <li>Filtra por tecnología: React, Tailwind, etc.</li>
+            <li>Inspírate en layouts de header, hero, cards y footer</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>5. Mobbin para mocks de apps móviles</h3>
+          <ul>
+            <li>Capturas de pantalla de apps populares</li>
+            <li>Explora patrones de navegación y UI</li>
+            <li>Analiza flujos: login, onboarding, perfil</li>
+          </ul>
+        </section>
+
+        <section>
+          <h3>6. Figma para maquetación y prototipos</h3>
+          <ul>
+            <li>Wireframes low-fi para estructura y flujo</li>
+            <li>Sistema de diseño: colores, tipografías y componentes</li>
+            <li>Prototipos interactivos con animaciones</li>
+            <li>Colaboración en tiempo real y handoff para devs</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

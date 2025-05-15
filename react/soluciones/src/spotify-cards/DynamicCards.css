@@ -1,0 +1,10 @@
+/* Contenedor en cuadrícula */
+.cards-wrapper {
+  display: grid;
+  gap: 1.5rem;             /* separación entre tarjetas */
+  padding: 2rem;
+  justify-content: center;
+
+  /* Responsive: 1-col en móvil, 2 en tablet, 3+ en desktop */
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+}
