@@ -4,11 +4,8 @@
   "version": "0.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "dev2": "node --watch index.js"
+    "dev": "node --watch index.js",
+    "sequelize": "sequelize"
   },
   "keywords": [
     "node",

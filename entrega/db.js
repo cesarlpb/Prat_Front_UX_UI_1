@@ -6,7 +6,7 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 
 // Ruta al fichero de base de datos (se creará si no existe)
-const dbPath = path.resolve(__dirname, 'db.sqlite');
+const dbPath = path.resolve(__dirname, 'dev-database.sqlite');
 
 // Abrir conexión
 const db = new sqlite3.Database(dbPath, sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE, (err) => {
