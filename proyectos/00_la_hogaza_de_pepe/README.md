@@ -85,6 +85,14 @@
 
 > Esas hogazas no se venden solas. 🐸
 
-![alt text](image.png)
+![alt text](./image.png)
+
+![alt text](./pepe_happy.png)
+
+![alt text](image-1.png)
+
+![alt text](./super_pepe.png)
+
+![alt text](./barra_pan.png)
 
 > In wheat, we trust ❤️
