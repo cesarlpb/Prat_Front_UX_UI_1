@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter: Morning Yoga Workout Card</title>
+
+    <!-- Fuentes & Iconos -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+      /* Reset & base */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: #f5f8fd;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        padding: 24px;
+      }
+
+      /* Tarjeta principal */
+      .card {
+        width: 420px;
+        background: #ffffff;
+        border-radius: 24px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .card img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 4px;
+      }
+
+      /* Encabezados */
+      .title {
+        font-size: 28px;
+        font-weight: 700;
+        color: #3752e1;
+        margin-bottom: 4px;
+      }
+
+      .subtitle {
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 0.5px;
+        color: #d0d6e2;
+        margin-bottom: 16px;
+      }
+
+      /* Rating */
+      .rating {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        margin-bottom: 16px;
+      }
+
+      .rating i {
+        color: #f6c244;
+      }
+
+      .score {
+        font-weight: 600;
+        margin-left: 4px;
+        color: #000000;
+      }
+
+      .rating a {
+        font-size: 14px;
+        color: #3752e1;
+        text-decoration: none;
+      }
+
+      /* Botón */
+      .btn {
+        display: inline-block;
+        background: transparent;
+        border: 2px solid #3752e1;
+        color: #3752e1;
+        padding: 10px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        margin-bottom: 24px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .btn:hover {
+        background: #3752e1;
+        color: #ffffff;
+      }
+
+      /* Cuadrícula de info */
+      .info-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 12px;
+        margin-bottom: 24px;
+      }
+
+      .info {
+        border: 2px solid #d4def7;
+        border-radius: 12px;
+        text-align: center;
+        padding: 16px 8px;
+      }
+
+      .info i {
+        font-size: 22px;
+        color: #3752e1;
+        margin-bottom: 8px;
+      }
+
+      .info .label {
+        font-size: 14px;
+        color: #3752e1;
+      }
+
+      .info .value {
+        font-weight: 600;
+      }
+
+      /* Descripción */
+      .description {
+        font-size: 14px;
+        line-height: 1.5;
+        color: #2d2b2b;
+      }
+
+      .description + .description {
+        margin-top: 16px;
+      }
+      .top-icons {
+        position: absolute;
+        width: 420px;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+        padding: 2.5em 1.75em;
+        z-index: 9999;
+        & i {
+          color: #fff;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="top-icons">
+        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-ellipsis"></i>
+      </div>
+      <img
+        src="https://placehold.co/800x800"
+        alt="Morning Yoga"
+      />
+
+      <div class="card-content">
+        <h2 class="title">Morning Yoga Workout</h2>
+        <p class="subtitle">with Brooklyn Sims</p>
+
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <span class="score">5.0</span>
+          <a href="#">(23 reviews)</a>
+        </div>
+
+        <button class="btn">Inhale Good Vibes</button>
+
+        <div class="info-grid">
+          <div class="info">
+            <i class="fa-regular fa-clock"></i>
+            <p class="label value">20 mins</p>
+          </div>
+
+          <div class="info">
+            <i class="fa-solid fa-gauge-high"></i>
+            <p class="label">Beginner</p>
+          </div>
+
+          <div class="info">
+            <i class="fa-solid fa-music"></i>
+            <p class="label">Ambient</p>
+          </div>
+
+          <div class="info">
+            <i class="fa-solid fa-dumbbell"></i>
+            <p class="label">None</p>
+          </div>
+        </div>
+
+        <p class="description">
+          Escape the stresses of quotidian existence with this harmonious fusion
+          of contemplative pranayama techniques and corporeal postures. You will
+          feel rejuvenated and ready to take on the day.
+        </p>
+        <p class="description">
+          The session commences with a succinct centering exercise, fostering a
+          seamless detachment from external distractions and inviting full
+          immersion into the present moment.
+        </p>
+        <p class="description">
+          You shall cultivate an unwavering focus on your breath, laying the
+          foundation for the ensuing practice.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
